@@ -14,15 +14,8 @@ function App() {
 
   if (loading) return <h1>Loading...</h1>
 
-  return (
-    <div className="container">
-      <h1>{title.toUpperCase()}</h1>      
-      <p>{body}</p>
-
-      {/* condition: if showComments is true than output 'yes' */}
-      {/* ? --> && */}
-      { showComments && (
-        <div className="comments">
+  const commentBlock = (
+    <div className="comments">
         <h3>Comments ({ comments.length })</h3>
         <ul>
           { comments.map((comment, index) => (
@@ -30,8 +23,18 @@ function App() {
           ))}
 
         </ul>
-      </div>   
-      ) }   
+      </div>
+  )
+
+  return (
+    <div className="container">
+      <h1>{title.toUpperCase()}</h1>      
+      <p>{body}</p>
+
+      {/* condition: if showComments is true than output 'yes' */}
+      {/* ? --> && */}
+      {/* if showComments true than show <div> */}
+      { showComments && commentBlock }   
 
     </div>
   )
