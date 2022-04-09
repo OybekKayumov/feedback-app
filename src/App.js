@@ -20,7 +20,8 @@ function App() {
       <p>{body}</p>
 
       {/* condition: if showComments is true than output 'yes' */}
-      { showComments ? (
+      {/* ? --> && */}
+      { showComments && (
         <div className="comments">
         <h3>Comments ({ comments.length })</h3>
         <ul>
@@ -30,7 +31,7 @@ function App() {
 
         </ul>
       </div>   
-      ) : null }   
+      ) }   
 
     </div>
   )
