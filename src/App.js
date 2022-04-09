@@ -10,7 +10,7 @@ function App() {
 
   // condition
   const loading = false
-  const showComments = false
+  const showComments = true
 
   if (loading) return <h1>Loading...</h1>
 
@@ -30,7 +30,7 @@ function App() {
 
         </ul>
       </div>   
-      ) : ('no') }   
+      ) : null }   
 
     </div>
   )
