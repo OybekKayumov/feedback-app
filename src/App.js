@@ -20,9 +20,8 @@ function App() {
       <p>{body}</p>
 
       {/* condition: if showComments is true than output 'yes' */}
-      {showComments ? 'yes' : 'no'}
-
-      <div className="comments">
+      { showComments ? (
+        <div className="comments">
         <h3>Comments ({ comments.length })</h3>
         <ul>
           { comments.map((comment, index) => (
@@ -30,7 +29,8 @@ function App() {
           ))}
 
         </ul>
-      </div>    
+      </div>   
+      ) : ('no') }   
 
     </div>
   )
