@@ -8,6 +8,11 @@ function App() {
     {id: 3, text: 'Comment Three'},
   ]
 
+  // condition
+  const loading = true
+
+  if (loading) return <h1>Loading...</h1>
+
   return (
     <div className="container">
       <h1>{title.toUpperCase()}</h1>      
