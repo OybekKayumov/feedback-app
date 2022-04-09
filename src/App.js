@@ -9,7 +9,8 @@ function App() {
   ]
 
   // condition
-  const loading = true
+  const loading = false
+  const showComments = false
 
   if (loading) return <h1>Loading...</h1>
 
@@ -17,6 +18,9 @@ function App() {
     <div className="container">
       <h1>{title.toUpperCase()}</h1>      
       <p>{body}</p>
+
+      {/* condition: if showComments is true than output 'yes' */}
+      {showComments ? 'yes' : 'no'}
 
       <div className="comments">
         <h3>Comments ({ comments.length })</h3>
