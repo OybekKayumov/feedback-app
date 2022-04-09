@@ -12,7 +12,10 @@ function App() {
     <div className="container">
       <h1>{title.toUpperCase()}</h1>      
       <p>{body}</p>
-      
+
+      <div className="comments">
+        <h3>Comments ({ comments.length })</h3>
+      </div>    
 
     </div>
   )
