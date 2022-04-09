@@ -7,7 +7,9 @@ function App() {
     <div className="container">
       <h1>{title}</h1>
       <p>{body}</p>
-
+      { 5 + 5 }
+      { Math.random() * (5 + 5) }
+      <h2>{title.toUpperCase()}</h2>
 
     </div>
   )
