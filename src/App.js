@@ -5,13 +5,7 @@ function App() {
 
   return (
     <>
-      {/* <Header text="Hello React"/> */}
-      {/* <Header /> */}
-
-      {/* <Header text={ true }/>  */}
-      {/* error in console */}
-
-      <Header /> 
+      <Header bgColor='green' textColor="#fff" /> 
       <div className="container">
         <h1>My App</h1>      
       </div>
@@ -100,3 +94,10 @@ export default App
 //     </div>
 //   )
 // }
+
+//
+{/* <Header text="Hello React"/> */}
+{/* <Header /> */}
+
+{/* <Header text={ true }/>  */}
+{/* error in console */}
