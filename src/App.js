@@ -4,8 +4,7 @@ import Header from "./components/Header"
 function App() {
 
   return (
-    <>
-      {/* <Header bgColor='green' textColor="#fff" />  */}
+    <>      
       <Header /> 
       <div className="container">
         <h1>My App</h1>      
@@ -102,3 +101,6 @@ export default App
 
 {/* <Header text={ true }/>  */}
 {/* error in console */}
+
+//
+{/* <Header bgColor='green' textColor="#fff" />  */}
