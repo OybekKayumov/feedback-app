@@ -1,14 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// function Header(props) {
 function Header({ text }) {
   return (
-    <header>
+    <header style={{ backgroundColor: 'blue', color: 'orange' }}>
 
       <div className='container'>
-        {/* <h2>Feedback UI</h2> */}
-        {/* <h2>{props.text}</h2> */}
         <h2>{text}</h2>
       </div>
 
@@ -26,3 +23,9 @@ Header.propTypes = {
 }
 
 export default Header
+
+// function Header(props) {
+
+{/* <h2>Feedback UI</h2> */}
+{/* <h2>{props.text}</h2> */}
+       
