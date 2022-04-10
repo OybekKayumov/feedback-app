@@ -21,4 +21,8 @@ Header.defaultProps = {
   text: 'FeedBack UI',
 }
 
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+}
+
 export default Header
