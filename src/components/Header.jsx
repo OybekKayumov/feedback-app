@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // function Header(props) {
 function Header({ text }) {
@@ -17,7 +18,7 @@ function Header({ text }) {
 }
 
 Header.defaultProps = {
-  text: 'FeedBack UI'
+  text: 'FeedBack UI',
 }
 
 export default Header
