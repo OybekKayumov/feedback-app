@@ -5,7 +5,8 @@ function App() {
 
   return (
     <>
-      <Header bgColor='green' textColor="#fff" /> 
+      {/* <Header bgColor='green' textColor="#fff" />  */}
+      <Header /> 
       <div className="container">
         <h1>My App</h1>      
       </div>
