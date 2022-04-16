@@ -1,8 +1,11 @@
 import React from 'react'
 
-function FeedbackStats() {
+function FeedbackStats({ feedback }) {
   return (
-    <div>FeedbackStats</div>
+    <div className='feedback-stats'>
+      <h4>{feedback.length} Reviews</h4>
+      <h4>Average Rating: 10</h4>
+    </div>
   )
 }
 
