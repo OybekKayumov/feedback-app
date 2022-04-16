@@ -6,7 +6,7 @@ function FeedbackStats({ feedback }) {
     return acc + cur.rating
   }, 0) / feedback.length
 
-  average = average.toFixed(1)
+  average = average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
     <div className='feedback-stats'>
@@ -25,3 +25,6 @@ export default FeedbackStats
 
 // makes one decimal place
 // average = average.toFixed(1)
+
+// if 9.0 than show 9. Remove decimal if it is a zero
+// average = average.toFixed(1).replace(/[.,]0$/, '')
