@@ -6,13 +6,12 @@ import FeedbackData from "./data/FeedbackData"
 
 //todo: JSX
 function App() {
-  const [feedback, setFeedback] = useState ()
+  const [feedback, setFeedback] = useState (FeedbackData)
 
   return (
     <>      
       <Header /> 
       <div className="container">
-        {/* <FeedbackItem /> */}
         <FeedbackList feedback={feedback} />
       </div>
     </>
