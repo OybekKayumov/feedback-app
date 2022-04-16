@@ -13,7 +13,7 @@ function App() {
       <Header /> 
       <div className="container">
         {/* <FeedbackItem /> */}
-        <FeedbackList />
+        <FeedbackList feedback={feedback} />
       </div>
     </>
   )

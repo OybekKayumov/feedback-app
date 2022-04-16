@@ -1,6 +1,7 @@
 import React from 'react'
 
-function FeedbackList() {
+function FeedbackList({feedback}) {
+  console.log('feedback: ', feedback);
   return (
     <div>
       List
