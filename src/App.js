@@ -10,7 +10,9 @@ function App() {
   const [feedback, setFeedback] = useState (FeedbackData)
 
   const deleteFeedback = (id) => {
-    console.log('App id:', id);
+    if(window.confirm('Are you sure you want to delete?')){
+      setFeedback(feedback.filter((item) => item.id !== id))
+    }
   }
 
   return (
@@ -24,6 +26,16 @@ function App() {
 }
 
 export default App
+
+
+
+// if true 
+// if(window.confirm('Are you sure you want to delete?'))
+// create new array such as 'feedback' with filter and loops through like forEach and map. But you can set a condition to filter out item that item.id is not equal to id that being passed in
+
+// this feedback will is going to return an array minus the one we're deleting and then that's what we're setting the feedback to using set feedback
+// feedback.filter((item) => item.id !== id)
+
 
 // import React from "react";
 //todo: Regular JS
