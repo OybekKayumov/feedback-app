@@ -6,7 +6,7 @@ import FeedbackData from "./data/FeedbackData"
 
 //todo: JSX
 function App() {
-  const [feedback, setFeedback] = useState (FeedbackData)
+  const [feedback, setFeedback] = useState ()
 
   return (
     <>      
