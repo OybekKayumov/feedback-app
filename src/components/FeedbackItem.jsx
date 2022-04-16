@@ -7,7 +7,12 @@ function FeedbackItem() {
 
   const handleClick = () => {
     // rating = 10    :this is not works in react
-    setRating(10)
+    // setRating(10)
+    // setRating(() => {
+    setRating((prev) => {
+      console.log('prev: ', prev);
+      return prev + 1;
+    })
   }
   return (
     <div className='card'>
