@@ -3,6 +3,7 @@ import Header from "./components/Header"
 // import FeedbackItem from "./components/FeedbackItem.jsx"
 import FeedbackList from "./components/FeedbackList.jsx"
 import FeedbackData from "./data/FeedbackData"
+import Card from "./components/shared/Card"
 
 //todo: JSX
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Header /> 
       <div className="container">
         <FeedbackList feedback={feedback} />
+        <Card>Hello React</Card>
       </div>
     </>
   )
