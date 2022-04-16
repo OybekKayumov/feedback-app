@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import FeedbackList from "./components/FeedbackList.jsx"
 import FeedbackData from "./data/FeedbackData"
 // import Card from "./components/shared/Card"
+import FeedbackStats from "./components/FeedbackStats"
 
 //todo: JSX
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <>      
       <Header /> 
       <div className="container">
+        <FeedbackStats feedback={ feedback } /> 
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </>
