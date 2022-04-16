@@ -7,8 +7,9 @@ function FeedbackItem({ item }) {
   
   return (
     <div className='card'>
-      <div className='num-display'>{ item.rating }</div>
-      <div className='text-display'>{ item.text }</div>
+      <div className='num-display'>r:{ item.rating }</div>
+      <div className='text-display'>text: { item.text }</div>
+      <div className='text-display'>id: { item.id }</div>
     </div>
   )
 }
