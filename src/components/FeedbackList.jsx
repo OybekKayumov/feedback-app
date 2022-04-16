@@ -1,4 +1,5 @@
 import React from 'react'
+import FeedbackItem from './FeedbackItem'
 
 function FeedbackList({feedback}) {
   if (!feedback || feedback.length === 0) {
@@ -9,7 +10,8 @@ function FeedbackList({feedback}) {
     <div className='feedback-list'>
       {/* List */}
       {feedback.map((item) => (
-        <div>{item.rating}</div>
+        
+        <FeedbackItem key={item.id} item={item} />
       ))}
 
     </div>
@@ -19,3 +21,5 @@ function FeedbackList({feedback}) {
 export default FeedbackList
 
 // console.log('feedback: ', feedback);
+
+{/* <div>{item.rating}</div> */}
