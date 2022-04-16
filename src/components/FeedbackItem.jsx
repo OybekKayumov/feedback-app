@@ -40,3 +40,20 @@ export default FeedbackItem
     // </div>
   // )
 // }
+
+//
+  // import React from 'react'
+  // import { useState } from 'react'
+
+// function FeedbackItem({ item }) {
+    // const [rating, setRating] = useState(7)
+    // const [text, setText] = useState('This is an example of a feedback item')
+  
+//   return (
+//     <div className='card'>
+//       <div className='num-display'>r:{ item.rating }</div>
+//       <div className='text-display'>text: { item.text }</div>
+//       <div className='text-display'>id: { item.id }</div>
+//     </div>
+//   )
+// }
