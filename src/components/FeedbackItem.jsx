@@ -2,11 +2,8 @@ import Card from "./shared/Card"
 
 function FeedbackItem({ item }) {
   
-  return (
-    // <Card reverse={true}>black
-    <Card reverse={true}>
-    {/* white */}
-    {/* <Card>   */}
+  return (    
+    <Card>
       <div className='num-display'>r:{ item.rating }</div>
       <div className='text-display'>text: { item.text }</div>
       <div className='text-display'>id: { item.id }</div>
@@ -57,3 +54,8 @@ export default FeedbackItem
 //     </div>
 //   )
 // }
+
+//
+// <Card reverse={true}>black
+    // <Card reverse={true}>
+    /* white */

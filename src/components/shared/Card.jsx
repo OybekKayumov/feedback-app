@@ -19,6 +19,11 @@ function Card({ children, reverse }) {
     )
 }
 
+// add default props
+Card.defaultProps = {
+  reverse: false,
+}
+
 export default Card
 
 // {/* Card */}
