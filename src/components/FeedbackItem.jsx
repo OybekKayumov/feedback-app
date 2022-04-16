@@ -3,11 +3,14 @@ import PropTypes from 'prop-types'
 import Card from "./shared/Card"
 
 function FeedbackItem({ item }) {
-  
+  const handleClick = (id) => {
+    console.log('id: ', id);
+  }
+
   return (    
     <Card>
       <div className='num-display'>{ item.rating }</div>
-      <button onClick={() => console.log('clicked id: ', item.id) } className='close'><FaTimes color='purple'/></button>
+      <button onClick={() => handleClick(item.id)} className='close'><FaTimes color='purple'/></button>
       <div className='text-display'>text: { item.text }</div>
       <div className='text-display'>id: { item.id }</div>
     </Card>
@@ -66,3 +69,10 @@ export default FeedbackItem
 // <Card reverse={true}>black
     // <Card reverse={true}>
     /* white */
+
+//
+{/* <button onClick={() => console.log('clicked id: ', item.id) }  */}
+
+//
+// pass in an argument like id 
+{/* <button onClick={() => handleClick(item.id)} className='close'></button> */}
