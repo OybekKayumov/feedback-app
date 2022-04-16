@@ -6,6 +6,8 @@ function FeedbackStats({ feedback }) {
     return acc + cur.rating
   }, 0) / feedback.length
 
+  average = average.toFixed(1)
+
   return (
     <div className='feedback-stats'>
       <h4>{feedback.length} Reviews</h4>
@@ -20,3 +22,6 @@ export default FeedbackStats
 // here is a function called isNaN
 // ternary operator : if isNaN than show 0, else show average
 // { isNaN(average) ? 0 : average}
+
+// makes one decimal place
+// average = average.toFixed(1)
