@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Card() {
+function Card({children}) {
   return (
-    <div>Card</div>
+    <div>      
+      {children}
+    </div>
   )
 }
 
 export default Card
+
+// {/* Card */}
