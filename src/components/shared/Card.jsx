@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card({children}) {
+function Card({ children, reverse }) {
   return (
-    <div  className='card'>      
+    <div  className='card reverse'>      
       {children}
     </div>
   )
