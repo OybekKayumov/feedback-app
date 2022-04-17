@@ -7,9 +7,16 @@ import { useState } from 'react'
 function FeedbackForm() {
   const [text, setText] = useState('')
   const [btnDisabled, setBtnDisabled] = useState(true)
-  const [message, setMessage] = useState('Hello')
+  const [message, setMessage] = useState('')
 
   const handleTextChange = (e) => {
+    // check for text
+    if (text === '') {
+      setBtnDisabled(true)
+      // nothing to show
+      setMessage(null)
+    }
+
     setText(e.target.value);
   }
 
