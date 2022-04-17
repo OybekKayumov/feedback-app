@@ -6,7 +6,7 @@ import { useState } from 'react'
 import RatingSelect from './RatingSelect'
 
 
-function FeedbackForm() {
+function FeedbackForm({handleAdd}) {
   const [text, setText] = useState('')
   //add rating
   const [rating, setRating] = useState(10)
@@ -41,7 +41,11 @@ function FeedbackForm() {
         rating
       }
 
-      console.log('newFeedback: ', newFeedback);
+      // console.log('newFeedback: ', newFeedback);
+      handleAdd(newFeedback);
+
+      // clear text field after submit
+      setText('')
     }
   }
 
@@ -67,6 +71,12 @@ function FeedbackForm() {
 }
 
 export default FeedbackForm
+
+// object console.log('newFeedback: ', newFeedback);
+// {
+//   "text": "this is a test",
+//   "rating": 8
+// }
 
 {/* todo - rating select component */}
 {/* <RatingSelect/>         */}
