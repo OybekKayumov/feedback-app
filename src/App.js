@@ -5,6 +5,7 @@ import FeedbackList from "./components/FeedbackList.jsx"
 import FeedbackData from "./data/FeedbackData"
 // import Card from "./components/shared/Card"
 import FeedbackStats from "./components/FeedbackStats"
+import FeedbackForm from "./components/FeedbackForm"
 
 //todo: JSX
 function App() {
