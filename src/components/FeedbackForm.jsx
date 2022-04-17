@@ -34,7 +34,7 @@ function FeedbackForm() {
     <Card>
       <form>
         <h2>How would you rate your service with us?</h2>
-        <RatingSelect select={(rating) => console.log(rating)}/>        
+        <RatingSelect select={(rating) => setRating(rating)}/>        
         <div className='input-group'>
           <input 
             onChange={handleTextChange} 
