@@ -23,7 +23,7 @@ function FeedbackForm() {
             placeholder='Write a review'
             value={ text }
           />
-          <Button type='submit' version='secondary'>Send</Button>
+          <Button type='submit'>Send</Button>
         </div>
       </form>
     </Card>
@@ -32,5 +32,7 @@ function FeedbackForm() {
 
 export default FeedbackForm
 
+
+{/* <Button type='submit' version='secondary'>Send</Button> */}
 
 {/* <button type='submit'>Send</button> */}
