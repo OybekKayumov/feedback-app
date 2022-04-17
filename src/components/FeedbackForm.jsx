@@ -1,8 +1,13 @@
 import React from 'react'
+import Card from './shared/Card'
 
 function FeedbackForm() {
   return (
-    <div>FeedbackForm</div>
+    <Card>
+      <form>
+        <h2>How would you rate your service with us?</h2>
+      </form>
+    </Card>
   )
 }
 
