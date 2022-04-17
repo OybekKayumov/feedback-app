@@ -4,7 +4,9 @@ import { useState } from 'react'
 function RatingSelect() {
   const [selected, setSelected] = useState(10)
 
-  const handleChange = (e) => {}
+  const handleChange = (e) => {
+    setSelected(+e.currentTarget.value);
+  }
 
   return (
     <ul className='rating'>
@@ -54,3 +56,13 @@ function RatingSelect() {
 }
 
 export default RatingSelect
+
+
+// this gives the actual number value selected, and typeOf is string 
+// const handleChange = (e) => {
+//   console.log(e.currentTarget.value);
+//   console.log(typeOf e.currentTarget.value);
+// }
+
+// change typeof to Number by (+)
+// console.log(typeof +e.currentTarget.value);
