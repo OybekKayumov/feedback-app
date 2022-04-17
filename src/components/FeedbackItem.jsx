@@ -11,8 +11,7 @@ function FeedbackItem({ item, handleDelete }) {
     <Card>
       <div className='num-display'>{ item.rating }</div>
       <button onClick={() => handleDelete(item.id)} className='close'><FaTimes color='purple'/></button>
-      <div className='text-display'>text: { item.text }</div>
-      <div className='text-display'>id: { item.id }</div>
+      <div className='text-display'>{ item.text }</div>      
     </Card>
   )
 }
@@ -24,6 +23,7 @@ FeedbackItem.propTypes = {
 export default FeedbackItem
 
 
+{/* <div className='text-display'>id: { item.id }</div> */}
 //
 // function FeedbackItem() {
 //   const [rating, setRating] = useState(7)

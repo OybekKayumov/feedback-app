@@ -13,7 +13,12 @@ function App() {
   const [feedback, setFeedback] = useState (FeedbackData)
 
   const addFeedback = (newFeedback) => {
-    console.log('newFeedback: ', newFeedback);
+    newFeedback.id = uuidv4()
+    // console.log('newFeedback: ', newFeedback);
+    // take all objects from feedback, and before them put newFeedback
+    // all the current items and add a new
+    // and add it into UI 
+    setFeedback([newFeedback, ...feedback]);
   }
 
   const deleteFeedback = (id) => {
@@ -36,6 +41,13 @@ function App() {
 
 export default App
 
+
+// newFeedback.id = uuidv4()
+// {
+//   "text": "this is a test 3",
+//   "rating": 5,
+//   "id": "be8c8e44-2932-4b20-8470-25f473b23f2f"
+// }
 
 // console.log('newFeedback: ', newFeedback);
 // {
