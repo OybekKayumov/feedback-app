@@ -3,6 +3,8 @@ import Card from './shared/Card'
 import Button from './shared/Button'
 // hook
 import { useState } from 'react'
+import RatingSelect from './RatingSelect'
+
 
 function FeedbackForm() {
   const [text, setText] = useState('')
@@ -32,7 +34,7 @@ function FeedbackForm() {
     <Card>
       <form>
         <h2>How would you rate your service with us?</h2>
-        {/* todo - rating select component */}
+        <RatingSelect/>        
         <div className='input-group'>
           <input 
             onChange={handleTextChange} 
@@ -51,8 +53,13 @@ function FeedbackForm() {
 
 export default FeedbackForm
 
+{/* todo - rating select component */}
+{/* <RatingSelect/>         */}
+
+
 // how to read: if there is a message, then lets have a div with className of message, inside actual {message}
 // {message && <div className='message'></div>}
+
 
 {/* <Button type='submit' version='secondary'>Send</Button> */}
 
