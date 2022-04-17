@@ -6,6 +6,10 @@ import { useState } from 'react'
 function FeedbackForm() {
   const [text, setText] = useState('')
 
+  const handleTextChange = (e) => {
+    console.log('e :', e.target.value);
+  }
+
   return (
     <Card>
       <form>
