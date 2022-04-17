@@ -32,6 +32,17 @@ function FeedbackForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (text.trim().length > 10) {
+      // create short object
+      const newFeedback = {
+        // text: text,
+        text,
+        rating
+      }
+
+      console.log('newFeedback: ', newFeedback);
+    }
   }
 
   return (
