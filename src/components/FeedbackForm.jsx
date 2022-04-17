@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 function FeedbackForm() {
   const [text, setText] = useState('')
+  //add rating
+  const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
 
