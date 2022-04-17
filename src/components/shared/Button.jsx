@@ -3,7 +3,7 @@ import React from 'react'
 // props ({...})
 function Button({ children, version, type, isDisabled }) {
   return (
-    <button >
+    <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
       { children }
     </button>
   )
