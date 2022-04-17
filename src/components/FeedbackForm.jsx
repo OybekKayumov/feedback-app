@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 function FeedbackForm() {
   const [text, setText] = useState('')
+  const [btnDisabled, setBtnDisabled] = useState(true)
+  const [message, setMessage] = useState('Hello')
 
   const handleTextChange = (e) => {
     setText(e.target.value);
@@ -23,8 +25,10 @@ function FeedbackForm() {
             placeholder='Write a review'
             value={ text }
           />
-          <Button type='submit'>Send</Button>
+          <Button type='submit' isDisabled={btnDisabled}>Send</Button>
         </div>
+
+        {message && <div className='message'>{message}</div>}
       </form>
     </Card>
   )
@@ -32,6 +36,8 @@ function FeedbackForm() {
 
 export default FeedbackForm
 
+// how to read: if there is a message, then lets have a div with className of message, inside actual {message}
+// {message && <div className='message'></div>}
 
 {/* <Button type='submit' version='secondary'>Send</Button> */}
 
