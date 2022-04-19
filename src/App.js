@@ -33,13 +33,16 @@ function App() {
     <Router>      
       <Header /> 
       <div className="container">
-        <Route exact path='/'>
-          <FeedbackForm handleAdd={addFeedback}/>
-          <FeedbackStats feedback={ feedback } /> 
-          <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-        </Route>
+        <Routes>
+          <Route exact path='/'>
+            <FeedbackForm handleAdd={addFeedback}/>
+            <FeedbackStats feedback={ feedback } /> 
+            <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+          </Route>
 
-        <Route path='/about' component={AboutPage} />
+          <Route path='/about' element={<AboutPage />} />
+        </Routes>
+        
       </div>
     </Router>
   )
@@ -47,6 +50,8 @@ function App() {
 
 export default App
 
+//changed to JSX element
+{/* <Route path='/about' component={AboutPage} /> */}
 
 {/* <Route path='/about'>This is the about route</Route> */}
 
