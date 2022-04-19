@@ -48,7 +48,7 @@ function App() {
           </Route>
 
           <Route path='/about' element={<AboutPage />} />
-          <Route path='/post/:id/:name' element={<Post />} />
+          <Route path='/post' element={<Post />} />
         </Routes>
 
         <Card>
@@ -68,6 +68,9 @@ function App() {
 }
 
 export default App
+
+{/* <Route path='/post/:id/:name' element={<Post />} /> */}
+
 
 //changed to JSX element
 {/* <Route path='/about' component={AboutPage} /> */}
