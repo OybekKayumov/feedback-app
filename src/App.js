@@ -34,10 +34,14 @@ function App() {
       <Header /> 
       <div className="container">
         <Routes>
-          <Route exact path='/'>
-            <FeedbackForm handleAdd={addFeedback}/>
-            <FeedbackStats feedback={ feedback } /> 
-            <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+          <Route exact path='/' element={
+            <>
+              <FeedbackForm handleAdd={addFeedback}/>
+              <FeedbackStats feedback={ feedback } /> 
+              <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+            </>
+          }>
+            
           </Route>
 
           <Route path='/about' element={<AboutPage />} />
