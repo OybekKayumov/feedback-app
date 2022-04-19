@@ -20,6 +20,11 @@ body {
   line-height: 1.6;
 }
 
+.active {
+  background-color: #333;
+  color: orange;
+}
+
 ul {
   list-style: none;
 }
