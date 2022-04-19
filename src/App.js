@@ -53,6 +53,10 @@ function App() {
           <NavLink to='/' activeClassName='active'>
             Home
           </NavLink>
+
+          <NavLink to='/about' activeClassName='active'>
+            About
+          </NavLink>
         </Card>
         
         <AboutIconLink />
