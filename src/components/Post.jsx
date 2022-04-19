@@ -23,7 +23,7 @@ function Post() {
       <button onClick={onClick}>Click to About</button>
 
       <Routes>
-        <Route path='/show' />
+        <Route path='/show' element={<h1>Hello, Post/Show page</h1>} />
       </Routes>
     </div>
   )
