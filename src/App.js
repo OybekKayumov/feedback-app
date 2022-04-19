@@ -11,6 +11,7 @@ import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from "./components/FeedbackForm"
 import AboutPage from './pages/AboutPage'
 import AboutIconLink from './components/AboutIconLink'
+import Post from './components/Post'
 
 //todo: JSX
 function App() {
@@ -47,6 +48,7 @@ function App() {
           </Route>
 
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/post/:id' element={<Post />} />
         </Routes>
 
         <Card>
