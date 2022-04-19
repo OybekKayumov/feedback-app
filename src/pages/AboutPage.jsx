@@ -1,8 +1,9 @@
+import Card from '../components/shared/Card'
 import React from 'react'
 
 function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <Card>AboutPage</Card>
   )
 }
 

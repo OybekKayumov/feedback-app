@@ -30,19 +30,25 @@ function App() {
   }
 
   return (
-    <>      
+    <Router>      
       <Header /> 
       <div className="container">
-        <FeedbackForm handleAdd={addFeedback}/>
-        <FeedbackStats feedback={ feedback } /> 
-        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-        <AboutPage/>
+        <Route exact path='/'>
+          <FeedbackForm handleAdd={addFeedback}/>
+          <FeedbackStats feedback={ feedback } /> 
+          <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        </Route>
+
+        <Route path='/about' component={AboutPage} />
       </div>
-    </>
+    </Router>
   )
 }
 
 export default App
+
+
+{/* <Route path='/about'>This is the about route</Route> */}
 
 
 // newFeedback.id = uuidv4()
