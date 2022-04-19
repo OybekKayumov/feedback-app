@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { useState } from "react"
 import Header from "./components/Header"
 // import FeedbackItem from "./components/FeedbackItem.jsx"
@@ -7,6 +8,7 @@ import FeedbackData from "./data/FeedbackData"
 // import Card from "./components/shared/Card"
 import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from "./components/FeedbackForm"
+import AboutPage from './pages/AboutPage'
 
 //todo: JSX
 function App() {
@@ -34,6 +36,7 @@ function App() {
         <FeedbackForm handleAdd={addFeedback}/>
         <FeedbackStats feedback={ feedback } /> 
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+        <AboutPage/>
       </div>
     </>
   )
