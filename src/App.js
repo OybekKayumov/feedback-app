@@ -48,7 +48,7 @@ function App() {
           </Route>
 
           <Route path='/about' element={<AboutPage />} />
-          <Route path='/post/:id' element={<Post />} />
+          <Route path='/post/:id/:name' element={<Post />} />
         </Routes>
 
         <Card>
