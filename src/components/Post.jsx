@@ -1,6 +1,6 @@
 import React from 'react'
 // import { useParams } from 'react-router-dom'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate, Route, Routes } from 'react-router-dom'
 
 function Post() {
   const status = 200
@@ -21,6 +21,10 @@ function Post() {
     <div>
       <h1>Post</h1>
       <button onClick={onClick}>Click to About</button>
+
+      <Routes>
+        <Route path='/show' />
+      </Routes>
     </div>
   )
 }
