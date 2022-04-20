@@ -12,6 +12,7 @@ import FeedbackForm from "./components/FeedbackForm"
 import AboutPage from './pages/AboutPage'
 import AboutIconLink from './components/AboutIconLink'
 import Post from './components/Post'
+import { FeedbackProvider} from './components/context/FeedbackContext'
 
 //todo: JSX
 function App() {
@@ -33,37 +34,39 @@ function App() {
   }
 
   return (
-    <Router>      
-      <Header /> 
-      <div className="container">
-        <Routes>
-          <Route exact path='/' element={
-            <>
-              <FeedbackForm handleAdd={addFeedback}/>
-              <FeedbackStats feedback={ feedback } /> 
-              <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
-            </>
-          }>
-            
-          </Route>
+    <FeedbackProvider>
+      <Router>      
+        <Header /> 
+        <div className="container">
+          <Routes>
+            <Route exact path='/' element={
+              <>
+                <FeedbackForm handleAdd={addFeedback}/>
+                <FeedbackStats feedback={ feedback } /> 
+                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+              </>
+            }>
+              
+            </Route>
 
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/post/*' element={<Post />} />
-        </Routes>
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/post/*' element={<Post />} />
+          </Routes>
 
-        <Card>
-          <NavLink to='/' activeClassName='active'>
-            Home
-          </NavLink>
+          <Card>
+            <NavLink to='/' activeClassName='active'>
+              Home
+            </NavLink>
 
-          <NavLink to='/about' activeClassName='active'>
-            About
-          </NavLink>
-        </Card>
-        
-        <AboutIconLink />
-      </div>
-    </Router>
+            <NavLink to='/about' activeClassName='active'>
+              About
+            </NavLink>
+          </Card>
+          
+          <AboutIconLink />
+        </div>
+      </Router>
+    </FeedbackProvider>
   )
 }
 
