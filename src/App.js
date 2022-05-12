@@ -1,11 +1,11 @@
-import { v4 as uuidv4 } from 'uuid'
+// import { v4 as uuidv4 } from 'uuid'
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom'
 import Card from './components/shared/Card'
-import { useState } from "react"
+// import { useState } from "react"
 import Header from "./components/Header"
 // import FeedbackItem from "./components/FeedbackItem.jsx"
 import FeedbackList from "./components/FeedbackList.jsx"
-import FeedbackData from "./data/FeedbackData"
+// import FeedbackData from "./data/FeedbackData"
 // import Card from "./components/shared/Card"
 import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from "./components/FeedbackForm"
@@ -16,22 +16,24 @@ import { FeedbackProvider} from './components/context/FeedbackContext'
 
 //todo: JSX
 function App() {
-  const [feedback, setFeedback] = useState (FeedbackData)
+  // const [feedback, setFeedback] = useState (FeedbackData)
 
-  const addFeedback = (newFeedback) => {
-    newFeedback.id = uuidv4()
-    // console.log('newFeedback: ', newFeedback);
-    // take all objects from feedback, and before them put newFeedback
-    // all the current items and add a new
-    // and add it into UI 
-    setFeedback([newFeedback, ...feedback]);
-  }
+  // goes to feedbackContext vN32
+  // const addFeedback = (newFeedback) => {
+    // newFeedback.id = uuidv4()
+      // console.log('newFeedback: ', newFeedback);
+      // take all objects from feedback, and before them put newFeedback
+      // all the current items and add a new
+      // and add it into UI 
+    // setFeedback([newFeedback, ...feedback]);
+  // }
 
-  const deleteFeedback = (id) => {
-    if(window.confirm('Are you sure you want to delete?')){
-      setFeedback(feedback.filter((item) => item.id !== id))
-    }
-  }
+  // goes to feedbackContext vN32
+  // const deleteFeedback = (id) => {
+  //   if(window.confirm('Are you sure you want to delete?')){
+  //     setFeedback(feedback.filter((item) => item.id !== id))
+  //   }
+  // }
 
   return (
     <FeedbackProvider>
@@ -41,11 +43,13 @@ function App() {
           <Routes>
             <Route exact path='/' element={
               <>
-                <FeedbackForm handleAdd={addFeedback}/>
+                {/* <FeedbackForm handleAdd={addFeedback}/> */}
+                <FeedbackForm />
                 {/* <FeedbackStats feedback={ feedback } />  */}
                 <FeedbackStats /> 
                 {/* <FeedbackList feedback={feedback} handleDelete={deleteFeedback} /> */}
-                <FeedbackList handleDelete={deleteFeedback} />
+                {/* <FeedbackList handleDelete={deleteFeedback} /> */}
+                <FeedbackList />
               </>
             }>
               
