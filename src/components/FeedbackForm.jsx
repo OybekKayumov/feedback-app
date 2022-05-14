@@ -9,7 +9,7 @@ import FeedbackContext from './context/FeedbackContext'
 
 // function FeedbackForm({handleAdd}) {
   function FeedbackForm() {
-  const {addFeedback, feedbackEdit} = useContext(FeedbackContext);
+  const {addFeedback, feedbackEdit, updateFeedback} = useContext(FeedbackContext);
 
   const [text, setText] = useState('')
   //add rating
@@ -56,7 +56,11 @@ import FeedbackContext from './context/FeedbackContext'
 
       // console.log('newFeedback: ', newFeedback);
       // handleAdd(newFeedback);
-      addFeedback(newFeedback);
+      if (feedbackEdit.edit === true) {
+        updateFeedback(feedbackEdit.item.id, newFeedback)
+      } else {
+        addFeedback(newFeedback);
+      }
 
       // clear text field after submit
       setText('')
