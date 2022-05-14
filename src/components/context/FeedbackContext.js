@@ -3,7 +3,10 @@ import { v4 as uuidv4 } from 'uuid'
 
 const FeedbackContext = createContext()
 
+
 export const FeedbackProvider = ({children}) => {
+  const [isLoading, setIsLoading] = useState(true)
+
   const [feedback, setFeedback] = useState([
     // {
     //   id: 1,
@@ -39,6 +42,8 @@ export const FeedbackProvider = ({children}) => {
 
     console.log('data: ', data);
     setFeedback(data);
+
+    setIsLoading(false);
   }
 
   // Add feedback, comes from APP.js feedbackContext vN32
@@ -73,6 +78,7 @@ export const FeedbackProvider = ({children}) => {
       value={{
         feedback,
         deleteFeedback,
+        isLoading,
         addFeedback,
         editFeedback,
         feedbackEdit,
