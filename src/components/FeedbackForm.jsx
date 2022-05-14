@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Card from './shared/Card'
 import Button from './shared/Button'
 // hook
@@ -9,13 +9,17 @@ import FeedbackContext from './context/FeedbackContext'
 
 // function FeedbackForm({handleAdd}) {
   function FeedbackForm() {
-  const {addFeedback} = useContext(FeedbackContext);
+  const {addFeedback, feedbackEdit} = useContext(FeedbackContext);
 
   const [text, setText] = useState('')
   //add rating
   const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
+
+  useEffect(() => {
+    console.log('Hello, useEffect');
+  }, [feedbackEdit])
 
   const handleTextChange = (e) => {
     // check for text

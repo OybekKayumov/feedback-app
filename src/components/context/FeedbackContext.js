@@ -22,17 +22,30 @@ export const FeedbackProvider = ({children}) => {
     }
   ])
 
-  // comes from APP.js feedbackContext vN32
+  const [feedbackEdit, setFeedbackEdit] = useState({
+    item: {},
+    edit: false,
+  })
+
+  // Add feedback, comes from APP.js feedbackContext vN32
   const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4()   
     setFeedback([newFeedback, ...feedback]);
   }
 
-  // comes from APP.js feedbackContext vN32
+  // Delete Feedback, comes from APP.js feedbackContext vN32
   const deleteFeedback = (id) => {
     if(window.confirm('Are you sure you want to delete?')){
       setFeedback(feedback.filter((item) => item.id !== id))
     }
+  }
+
+  // Set item to be updated
+  const editFeedback = (item) => {
+    setFeedbackEdit({
+      item,
+      edit: true
+    })
   }
 
   return ( 
@@ -41,6 +54,8 @@ export const FeedbackProvider = ({children}) => {
         feedback,
         deleteFeedback,
         addFeedback,
+        editFeedback,
+        feedbackEdit,
       }}
     >
       {children}
