@@ -60,11 +60,15 @@ function App() {
           </Routes>
 
           <Card>
-            <NavLink to='/' activeClassName='active'>
+            <NavLink to='/' activeClassName='active'
+              style={{ padding: "10px 20px", textAlign: "center"}}
+            >
               Home
             </NavLink>
 
-            <NavLink to='/about' activeClassName='active'>
+            <NavLink to='/about' activeClassName='active'
+              style={{ padding: "10px 20px", textAlign: "center"}}
+            >
               About
             </NavLink>
           </Card>
