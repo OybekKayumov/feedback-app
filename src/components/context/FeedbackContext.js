@@ -48,9 +48,20 @@ export const FeedbackProvider = ({children}) => {
   }
 
   // Add feedback, comes from APP.js feedbackContext vN32
-  const addFeedback = (newFeedback) => {
-    newFeedback.id = uuidv4()   
-    setFeedback([newFeedback, ...feedback]);
+  const addFeedback = async (newFeedback) => {
+    // POST
+    const response = await fetch('/feedback', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newFeedback),
+    })
+
+    // newFeedback.id = uuidv4() 
+    // setFeedback([newFeedback, ...feedback]);
+    const data = await response.json();  
+    setFeedback([data, ...feedback]);
   }
 
   // Delete Feedback, comes from APP.js feedbackContext vN32
