@@ -18,7 +18,12 @@ import FeedbackContext from './context/FeedbackContext'
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    console.log('Hello, useEffect');
+    // console.log('Hello, useEffect');
+    if (feedbackEdit.edit === true) {
+      setBtnDisabled(false)
+      setText(feedbackEdit.item.text)
+      setRating(feedbackEdit.item.rating)
+    }
   }, [feedbackEdit])
 
   const handleTextChange = (e) => {
