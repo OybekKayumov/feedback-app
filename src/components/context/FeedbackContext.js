@@ -29,7 +29,16 @@ export const FeedbackProvider = ({children}) => {
 
   useEffect(() => {
     console.log('123: ', 123);
+    fetchFeedback();
   }, [])
+
+  // fetch feedback : ?_sort=id&_order=desc: we want to get sorted by id
+  const fetchFeedback = async () => {
+    const response = await fetch(`http://localhost:5000/feedback?_sort=id&_order=desc`)
+    const data = await response.json();
+
+    console.log('data: ', data);
+  }
 
   // Add feedback, comes from APP.js feedbackContext vN32
   const addFeedback = (newFeedback) => {
