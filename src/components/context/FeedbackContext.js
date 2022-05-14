@@ -38,6 +38,7 @@ export const FeedbackProvider = ({children}) => {
     const data = await response.json();
 
     console.log('data: ', data);
+    setFeedback(data);
   }
 
   // Add feedback, comes from APP.js feedbackContext vN32
