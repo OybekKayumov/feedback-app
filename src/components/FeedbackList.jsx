@@ -8,9 +8,10 @@ import FeedbackContext from './context/FeedbackContext'
 // function FeedbackList({feedback, handleDelete}) {
 // function FeedbackList({ handleDelete}) {
 function FeedbackList() {
-  const {feedback} = useContext(FeedbackContext)
+  const { feedback, isLoading } = useContext(FeedbackContext)
 
-  if (!feedback || feedback.length === 0) {
+  // how to read: if it's not loading and there's no feedback or length is zero, then show "No Feedback Yet"
+  if (!isLoading && (!feedback || feedback.length === 0)) {
     return <p>No Feedback Yet</p>
   }
 
