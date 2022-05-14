@@ -1,4 +1,7 @@
 # feedback-app
+- give feedback to any app
+
+![image](https://user-images.githubusercontent.com/85465559/168424787-da631b7e-149c-4801-9223-6724f4798dd6.png)
 
 
 ## Available Scripts
@@ -21,3 +24,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 app is deployed by heroku:
 
 See [demo](https://feedback-react-app.herokuapp.com/)
+
+created on the basis of the [Udemy](https://www.udemy.com/course/react-front-to-back-2022/) course 
+"React Front To Back 2022: Learn modern React by building 4 projects including a Firebase 9 app and a full stack MERN app", author Brad Traversy.
