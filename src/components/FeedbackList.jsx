@@ -1,9 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 // import PropTypes from 'prop-types'
 import FeedbackItem from './FeedbackItem'
-import { useContext } from 'react'
 import FeedbackContext from './context/FeedbackContext'
+import Spinner from './shared/Spinner'
 
 // function FeedbackList({feedback, handleDelete}) {
 // function FeedbackList({ handleDelete}) {
@@ -15,7 +16,8 @@ function FeedbackList() {
     return <p>No Feedback Yet</p>
   }
 
-  return isLoading ? ( <h3>Loading...</h3> ) : 
+  // return isLoading ? ( <h3>Loading...</h3> ) : 
+  return isLoading ? ( <Spinner /> ) : 
     (
       <div className='feedback-list'>
       <AnimatePresence/>
